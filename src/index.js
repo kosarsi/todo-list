@@ -27,8 +27,6 @@ class Project {
 
 let projects; 
 
-// localStorage.removeItem("projectList");
-
 if (localStorage.getItem("projectList") == null) {
     projects = [new Project("Inbox")];
     console.log("nothing");
@@ -480,7 +478,7 @@ submitProjectModal.addEventListener('click', (event) => {
     event.preventDefault();
     const formData = new FormData(projectSubmitForm);
     const name = formData.get('name');
-    if (name === '') {
+    if (name == '') {
         return; 
     }
     projects.push(new Project(name));
