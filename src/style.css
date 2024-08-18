@@ -1,0 +1,311 @@
+* {
+    font-family: "Raleway", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.main-tabs {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    gap: 10px;
+}
+
+.main-tabs span {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.main-tabs span:hover {
+    background-color: #C9C9C9;
+    cursor: pointer;
+}
+
+.sidebar {
+    background-color: #E5E5E5;
+    height: max(100vh, 100%);
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.projects {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+}
+
+.create_project_button button {
+    margin-left: 5px;
+    margin-top: 40px;
+    width: 360px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.create_project_button button:hover {
+    background-color: #C9C9C9;
+    cursor: pointer;
+}
+
+.create_project_button button span:first-child {
+    margin-right: auto;
+}
+
+.create_project_button button span:nth-child(2) {
+    font-size: 52px;
+    font-weight: 200;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 7fr 17fr;
+}
+
+.todo-items {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+}
+
+.todo-items .tab-title {
+    font-size: 48px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid black;
+}
+
+#create_project_dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#create_project_dialog > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#project-creator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#project-creator .inputs {
+    display: flex;
+    justify-content: center;
+}
+
+#project-creator .inputs input {
+    width: 95%;
+}
+
+.create-project-header {
+    padding-top: 10px;
+}
+
+#project-creator .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+#project-creator .buttons button {
+    width: 95%;
+}
+
+.projects-list {
+    padding-top: 20px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    gap: 10px;
+}
+
+.projects-list div {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects-list div button {
+    padding: 5px;
+    background-color: #F9CDCD;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.projects-list div button:hover {
+    cursor: pointer;
+    background-color: #7e2d2d;
+}
+
+.projects-list div:hover {
+    background-color: #C9C9C9;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #C9C9C9;
+}
+
+.tab-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab-title button {
+    height: 60px;
+    width: 300px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.tab-title button:hover {
+    background-color: #C9C9C9;
+    cursor: pointer;
+}
+
+#create_todo_dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+#create_todo_dialog > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#create_todo_dialog > div > form > .inputs {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#create_todo_dialog .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#create_todo_dialog .buttons button {
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#create_todo_dialog .buttons button:hover {
+    cursor: pointer;
+    background-color: #C9C9C9;
+}
+
+.todo-list {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.border:hover {
+    cursor: pointer;
+    background-color: #C9C9C9;
+}
+
+.todo-list div div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 25px;
+}
+
+.todo-list div p {
+    padding-left:  20px;
+}
+
+.border {
+    border: 3px solid black;
+}
+
+.no-border {
+    border: none; 
+}
+
+.expanded {
+    height: 70px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.expanded:hover {
+    cursor: pointer;
+    background-color: #C9C9C9;
+}
+
+.todo-list div div button {
+    background-color: #F9CDCD;
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.todo-list div div button:hover {
+    cursor: pointer;
+    background-color: #7e2d2d;
+}
+
+.priority {
+    margin-right: auto;
+}
+
+.circle {
+    border-radius: 100000px;
+    height: 20px;
+    width: 20px;
+    border: 3px solid black;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="main-tabs">
+            <span id="all">All Projects</span>
+            <span id="today">Today</span>
+            <span id="week">This Week</span>
+        </div>
+        <div class="projects">
+            <h1>Projects</h1>
+        </div>
+        <div class="create_project_button">
+            <button>
+                <span>Create Project</span>
+                <span>+</span>
+            </button>
+        </div>
+        <div class="projects-list">
+
+        </div>
+    </div>
+    <div class="todo-items">
+        <div class="tab-title">
+            <span class="tab-title-header">All Projects</span>
+            <button id="add-todo-button">Add Todo</button>
+        </div>
+        <div class="todo-list">
+            
+        </div>
+    </div>
+
+
+
+    
+    <dialog id="create_project_dialog" data-modal class="modal">
+        <div>
+            <div class="create-project-header">Create Project</div>
+            <form method="dialog" id="project-creator">
+                <div class="inputs">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="buttons">
+                    <button type="submit" id="project-submit">Create</button>
+                    <button id="project-close">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+    <dialog id="create_todo_dialog" data-modal class="modal">
+        <div>
+            <div class="create-todo-header">Create Todo</div>
+            <form method="dialog" id="todo-creator">
+                <div class="inputs">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <textarea name="description" id="description" rows="4" cols="50" required></textarea>
+                    <div>
+                        <label for="date">Due Date:</label>
+                        <input type="date" id="date" name="date" placeholder="Date" required>
+                    </div>
+                    <div class="priority">
+                        <div>
+                            <span>Priority:</span>
+                        </div>
+                        <div class="low">
+                            <input type="radio" id="low" name="priority" value="low">
+                            <label for="low">Low</label>
+                        </div>
+                        <div class="medium">
+                            <input type="radio" id="medium" name="priority" value="medium">
+                            <label for="low">Medium</label>
+                        </div>
+                        <div class="high">
+                            <input type="radio" id="high" name="priority" value="high">
+                            <label for="low">High</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="submit" id="todo-submit">Create</button>
+                    <button id="todo-close">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+</body>
+</html>
