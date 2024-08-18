@@ -98,7 +98,7 @@ function displayTodos() {
                             todo.completed = true; 
                         }
                         cancelExpand = true; 
-                        console.log("check clicked");
+                        localStorage.setItem("projectList", JSON.stringify(projects));
                     });
                     checkBox.append(checkBoxText);
                     checkBox.classList.add('circle');
@@ -114,6 +114,7 @@ function displayTodos() {
                     deleteButton.addEventListener('click', () => {
                         projects[0].todos.splice(projects[0].todos.indexOf(todo), 1);
                         displayTodos(); 
+                        localStorage.setItem("projectList", JSON.stringify(projects));
                     });
                     todoElement.append(checkBox);
                     todoElement.append(newItem);
@@ -175,7 +176,7 @@ function displayTodos() {
                                 todo.completed = true; 
                             }
                             cancelExpand = true; 
-                            console.log("check clicked");
+                            localStorage.setItem("projectList", JSON.stringify(projects));
                         });
                         checkBox.append(checkBoxText);
                         checkBox.classList.add('circle');
@@ -191,6 +192,7 @@ function displayTodos() {
                         deleteButton.addEventListener('click', () => {
                             projects[0].todos.splice(projects[0].todos.indexOf(todo), 1);
                             displayTodos(); 
+                            localStorage.setItem("projectList", JSON.stringify(projects));
                         });
                         todoElement.append(checkBox);
                         todoElement.append(newItem);
@@ -254,7 +256,7 @@ function displayTodos() {
                                 todo.completed = true; 
                             }
                             cancelExpand = true; 
-                            console.log("check clicked");
+                            localStorage.setItem("projectList", JSON.stringify(projects));
                         });
                         checkBox.append(checkBoxText);
                         checkBox.classList.add('circle');
@@ -270,6 +272,7 @@ function displayTodos() {
                         deleteButton.addEventListener('click', () => {
                             projects[0].todos.splice(projects[0].todos.indexOf(todo), 1);
                             displayTodos(); 
+                            localStorage.setItem("projectList", JSON.stringify(projects));
                         });
                         todoElement.append(checkBox);
                         todoElement.append(newItem);
@@ -330,7 +333,7 @@ function displayTodos() {
                     todo.completed = true; 
                 }
                 cancelExpand = true; 
-                console.log("check clicked");
+                localStorage.setItem("projectList", JSON.stringify(projects));
             });
             checkBox.append(checkBoxText);
             checkBox.classList.add('circle');
@@ -346,6 +349,7 @@ function displayTodos() {
             deleteButton.addEventListener('click', () => {
                 currentProject.todos.splice(currentProject.todos.indexOf(todo), 1); 
                 displayTodos(); 
+                localStorage.setItem("projectList", JSON.stringify(projects));
             });
             todoElement.append(checkBox);
             todoElement.append(newItem);
