@@ -478,7 +478,7 @@ submitProjectModal.addEventListener('click', (event) => {
     event.preventDefault();
     const formData = new FormData(projectSubmitForm);
     const name = formData.get('name');
-    if (name == '') {
+    if (name === '') {
         return; 
     }
     projects.push(new Project(name));
