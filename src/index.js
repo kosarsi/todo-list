@@ -33,7 +33,6 @@ if (localStorage.getItem("projectList") == null) {
     projects = JSON.parse(localStorage.getItem("projectList"));
 }
 
-
 let currentProject = "all"; 
 
 function displayProjects() {
@@ -52,6 +51,7 @@ function displayProjects() {
                 currentProject = project;
                 displayTodos();
             }
+            localStorage.setItem("projectList", JSON.stringify(projects));
         });
         deleteButton.addEventListener('click', () => {
             projects.splice(projects.indexOf(project), 1); 
@@ -147,6 +147,7 @@ function displayTodos() {
                         } else {
                             cancelExpand = false; 
                         }
+                        localStorage.setItem("projectList", JSON.stringify(projects));
                     });
                     todoList.append(todoContainer);
                 }
@@ -224,6 +225,7 @@ function displayTodos() {
                             } else {
                                 cancelExpand = false; 
                             }
+                            localStorage.setItem("projectList", JSON.stringify(projects));
                         });
                         todoList.append(todoContainer);
                     }
@@ -303,6 +305,7 @@ function displayTodos() {
                             } else {
                                 cancelExpand = false; 
                             }
+                            localStorage.setItem("projectList", JSON.stringify(projects));
                         });
                         todoList.append(todoContainer);
                     }
@@ -379,11 +382,13 @@ function displayTodos() {
                 } else {
                     cancelExpand = false; 
                 }
+                localStorage.setItem("projectList", JSON.stringify(projects));
             });
             todoList.append(todoContainer);
         }
     }
     localStorage.setItem("projectList", JSON.stringify(projects));
+    console.log(localStorage.get("projectList"));
 }
 
 const allTodos = document.querySelector('#all');
@@ -442,7 +447,6 @@ submitTodoForm.addEventListener('click', (event) => {
     }
 
     if (typeof currentProject === "string") {
-        // Either all projects, today, or this week
         projects[0].todos.push(newTodo);
     } else {
         currentProject.todos.push(newTodo);
