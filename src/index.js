@@ -9,7 +9,6 @@ class TodoItem {
         this.day = dueDate.getDate();
         this.month = dueDate.getMonth();
         this.year = dueDate.getFullYear(); 
-        console.log(this.dueDate);
         this.priority = priority; 
         this.completed = false; 
         this.expanded = false; 
@@ -29,7 +28,6 @@ let projects;
 
 if (localStorage.getItem("projectList") == null) {
     projects = [new Project("Inbox")];
-    console.log("nothing");
     localStorage.setItem("projectList", JSON.stringify(projects)); 
 } else {
     projects = JSON.parse(localStorage.getItem("projectList"));
@@ -149,7 +147,6 @@ function displayTodos() {
                         } else {
                             cancelExpand = false; 
                         }
-                        console.log("expand clicked");
                     });
                     todoList.append(todoContainer);
                 }
@@ -227,7 +224,6 @@ function displayTodos() {
                             } else {
                                 cancelExpand = false; 
                             }
-                            console.log("expand clicked");
                         });
                         todoList.append(todoContainer);
                     }
@@ -307,7 +303,6 @@ function displayTodos() {
                             } else {
                                 cancelExpand = false; 
                             }
-                            console.log("expand clicked");
                         });
                         todoList.append(todoContainer);
                     }
@@ -384,7 +379,6 @@ function displayTodos() {
                 } else {
                     cancelExpand = false; 
                 }
-                console.log("expand clicked");
             });
             todoList.append(todoContainer);
         }
@@ -458,7 +452,6 @@ submitTodoForm.addEventListener('click', (event) => {
 
     localStorage.setItem("projectList", JSON.stringify(projects));
 
-    console.log(JSON.stringify(projects));
     addTodoModal.close();
     addTodoForm.reset();
 });
@@ -490,7 +483,6 @@ submitProjectModal.addEventListener('click', (event) => {
     createProjectModal.close();
     displayProjects(); 
     localStorage.setItem("projectList", JSON.stringify(projects));
-    console.log(JSON.stringify(projects));
 });
 
 displayProjects();
